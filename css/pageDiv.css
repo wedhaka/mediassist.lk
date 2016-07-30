@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main{
+	width:100%;
+	height:auto;
+	float:left;
+}
+
+.navbar-brand{
+	padding:0 !important;}
+
+.full {
+  background:url(../images/home/bg1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.abtBg {
+  background:url(../images/home/bg2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.contactBg {
+  background:url(../images/home/bg3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.copyRight{
+	background-color:#001A66;
+	width:100%;
+	float:left;
+	left: 0;
+    position: fixed;
+    right: 0;
+	bottom:0;
+	padding-top:10px;
+	min-height:35px;
+    z-index: 1030;
+}
+
+.Copy2{
+	position: relative !important;
+	}
+
+.HomeCom{
+	margin-top:18%;}
+
+.HomeCom h1{
+	text-align:center;
+	text-transform:uppercase;
+	color:#FFF;
+	text-shadow:1px 1px 1px #000000;
+	font-size:50px;
+	font-family:Georgia, Verdana, Arial;
+	font-weight:normal;
+	letter-spacing:1px;
+}
+
+.HomeCom p{
+	text-align:center;
+	text-shadow:1px 1px 1px #000000;
+	color:#FFF;
+	font-family:Georgia, Verdana, Arial;
+	font-size:16px;
+	font-style:italic;
+}
+
+.mainCategory{
+	padding-top:35px;}
+
+.AboutCom{
+	padding-top:10%;}
+
+.DoctorFilter, .DrugFilter{
+	padding-top:8%;
+}
+
+.DocDetails{
+	background-color:#F1F4F8;
+	padding:15px;
+	min-height:80px;
+	border:1px solid #C9CCDA;
+}
+
+.DocDetails h3{
+	color:#003;
+	text-transform:capitalize;}
+
+.DocDetails b{
+	color:#326187;
+	text-transform:uppercase;
+	letter-spacing:.5px;
+	line-height:1.5em;
+	width:100%;
+	float:left;
+}
+
+.DocMore, .drugMore{
+	padding-top:10px;
+}
+
+
+	
+.DocMore h3,.drugMore h3{
+	color:#001A66;
+	text-transform:uppercase;
+	font-size:16px;
+	font-weight:bold;
+	padding-top:10px;
+}
+
+.DocMore b, .drugMore b{
+	color:#666;
+	font-size:13px;
+	letter-spacing:1px;}
+
+.DocMore p{
+	color:#999;
+	font-size:13px;
+}
+.drugMore p{
+	color: #003;
+    text-transform: uppercase;
+	font-size:13px;}
+
+.Doc_Colification ul{
+	width:100%;
+	float:left;	}
+	
+.Doc_Colification ul li{
+	list-style:none;
+	width:100%;
+	padding-top:5px;
+	min-height:30px;
+	line-height:30px;
+	float:left;
+}
+
+.Doc_Colification ul li b{
+	width:38%;
+	float:left;
+	text-transform:uppercase;
+	font-size:12px;
+	color:#001A66;
+}
+	
+.Doc_Colification ul li span{
+		width:2%;
+		float:left;
+}
+
+.Doc_Colification ul li p{
+	width:60%;
+	float:left;
+	line-height:30px;
+	color:#999;}
+
+
+
+
+.drug_Dtls ul{
+	width:100%;
+	float:left;	}
+	
+.drug_Dtls ul li{
+	list-style:none;
+	width:100%;
+	padding-top:5px;
+	min-height:30px;
+	line-height:30px;
+	float:left;
+}
+
+.drug_Dtls ul li b{
+	width:38%;
+	float:left;
+	text-transform:uppercase;
+	font-size:12px;
+	color:#001A66;
+}
+	
+.drug_Dtls ul li span{
+		width:2%;
+		float:left;
+}
+
+.drug_Dtls ul li p{
+	width:60%;
+	float:left;
+	line-height:30px;
+	color:#999;}
+
+
+.DrugDetails{
+	background-color:#F1F4F8;
+	padding:15px;
+	min-height:80px;
+	border:1px solid #C9CCDA;
+}
+
+.DrugDetails h3{
+	color:#003;
+	text-transform:capitalize;}
+
+.DrugDetails b{
+	color:#326187;
+	text-transform:uppercase;
+	letter-spacing:.5px;
+	line-height:1.5em;
+	width:100%;
+	float:left;
+	font-size:14px;
+}
+
+.DrugDetails p{
+	color:#003;
+	text-transform:uppercase;
+}
+
+.modal-header{
+	width:100%;
+	float:left;
+	background:#FFF;
+}
+
+.modal-body{
+	width:100%;
+	float:left;
+	background:#FFF;
+}
+
+.modal-footer{
+	background:#FFF;
+	width:100%;
+	float:left;
+}
+
+.aboutDtls, .ContaDtl{
+	background-color:rgba(0, 26, 102, 0.8);
+	padding:40px;
+	border-radius:15px;}

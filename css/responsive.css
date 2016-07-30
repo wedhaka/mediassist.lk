@@ -1,0 +1,27 @@
+.navbar-inverse{
+	background-color:#001A66;
+	border-bottom:1px solid #001A66;
+}
+
+/* xs mobile */
+@media (max-width: 767px) {
+}
+
+/* sm potrate tab*/
+@media (min-width: 768px) and (max-width: 992px) {
+}
+
+/* md land tab */
+@media (min-width: 993px) and (max-width: 1200px) {
+}
+
+
+/* XS Portrait */
+@media (min-width: 480px) and (max-width: 700px) {
+}
+
+/* lg */ 
+@media (min-width: 1200px) {
+}
+
+

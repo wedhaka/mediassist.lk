@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="images/home/icon.jpg">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Medi Assist - Best medical online services</title>
+        <meta name="Keywords" content="" />
+        <meta name="description" content="">
+        <meta name="Medi Assist" content="Medi Assist">
+        <meta name="SKYPE_TOOLBAR" CONTENT="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <!-- COMMON CSS-->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <style>
+          html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          #map {
+            height: 100%;
+            width: 100%;
+          }
+        </style>     
+    </head>
+    <body>
+        <div id="main">
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" title="Medi-Assist" href="index.html"><img src="images/home/logo.jpg"></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav pull-right">
+                            <li>
+                                <a href="index.html" title="Home" class="link1">Home</a>
+                            </li>
+                            <li>
+                                <a href="about_us.html" title="About Us" class="link1">About Us</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" title="Contact Us" class="link1">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link1">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            
+            
+            
+            <!-- Page Content -->
+            <div class="container">
+                <div class="row">                 
+                    
+                </div>
+                <!-- /.row -->
+            </div>
+            <div id="map"></div>
+            <!-- /.container -->
+            <div  class="copyRight">
+                <p class="tx1 text-center">© 2015 Mediassist. All rights reserved.</p>
+            </div>
+            
+        </div>
+        <script>
+          // window height
+          var heightData = document.body.offsetHeight;
+          $("#map").css({
+            'height': heightData - 20
+          });
+
+          // This example requires the Places library. Include the libraries=places
+          // parameter when you first load the API. For example:
+          // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+          var map;
+          var infowindow;
+          var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
+
+          function initMap() {
+            var pyrmont = {lat: 6.8675288, lng: 79.8733406};
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: pyrmont,
+              zoom: 15,
+              population: 50
+            });
+
+            // var infoWindow = new google.maps.InfoWindow({map: map});
+            // Try HTML5 geolocation.
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+                };
+
+                // infoWindow.setPosition(pos);
+                // infoWindow.setContent('Location found.');
+                // map.setCenter(pos);
+
+                var userMarker = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    icon: im
+                });
+                
+                var cityCircle = new google.maps.Circle({
+                  strokeColor: '#0080FF',
+                  strokeOpacity: 0.8,
+                  strokeWeight: 2,
+                  fillColor: '#0080FF',
+                  fillOpacity: 0.1,
+                  map: map,
+                  center: pos,
+                  radius: 1000
+                });
+
+                infowindow = new google.maps.InfoWindow();
+                var service = new google.maps.places.PlacesService(map);
+                service.nearbySearch({
+                  location: pos,
+                  radius: 1000,
+                  type: ['pharmacy']
+                }, callback);
+
+              }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+              });
+            } else {
+              // Browser doesn't support Geolocation
+              handleLocationError(false, infoWindow, map.getCenter());
+            }            
+          }
+
+          function callback(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+              for (var i = 0; i < results.length; i++) {
+                createMarker(results[i]);
+              }
+            }
+          }
+
+          function createMarker(place) {
+            var placeLoc = place.geometry.location;
+            var marker = new google.maps.Marker({
+              map: map,
+              position: place.geometry.location
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.setContent(place.name);
+              infowindow.open(map, this);
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy26NdMNm089r5mu1iPcHERaTRqQiMLnM&libraries=places&callback=initMap" async defer></script>
+    </body>
+</html>

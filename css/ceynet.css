@@ -1,0 +1,267 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, em, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tr, th, td {
+    border: 0 none;
+    font-style:normal;
+    font-weight:normal;
+    margin:0;
+    outline:0 none;
+    padding:0;
+}
+
+p{
+	color:#CCC;
+	text-shadow:1px 1px 1px #FFF;
+	font-family:calibri, verdana, tahoma;
+	font-size:13px;
+	line-height:1.6em;
+}
+
+img{
+	border:0;
+}
+
+object, embed {
+    outline: 0 none;
+}
+
+
+a {
+	text-decoration: none;
+	color: #666666;
+	font-family: tahoma, verdana, Arial;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000;
+	font-family: tahoma, verdana, Arial;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+a:focus {
+outline: none !important;
+text-decoration:none !important;
+}
+
+.TxCenter{
+	text-align:center;
+}
+
+.PaddingNone{
+	padding:0 !important;
+}
+
+.Padd_Left{
+	padding-left:0 !important;
+}
+
+.Padd_Right{
+	padding-right:0 !important;
+}
+
+.PaddingBtm{
+	padding-bottom:20px !important;
+}
+
+h2{
+	text-transform:uppercase;
+	font-size:45px;
+	padding-bottom:5px;
+	color:#0ccfff;
+	font-family:Georgia, Verdana, Arial;
+	font-weight:normal;
+	letter-spacing:1px;
+	text-shadow:1px 1px 1px #001A66;
+}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background:#000082; color: #fff; text-shadow: none;}
+::selection {background:#000082; color: #fff; text-shadow: none;} 
+
+/*<--------------------------------------------------------------BORDERS---------------------------------------------------------->*/
+
+.border1{
+	border: 1px solid #CCCCCC;
+	background-color:#FFF;
+	padding:1px;
+}
+
+
+/*<--------------------------------------------------------------JUSTIFY_TX---------------------------------------------------------->*/
+
+.tx_jesty1 {
+	font-family:Arial, Verdana, Tahoma, Georgia;
+	font-size:13px;
+	font-weight: normal;
+	color: #FFF;
+	text-decoration: none;
+	text-shadow:1px 1px 1px #000;
+	text-align:justify;
+	line-height:1.7em;
+}
+
+.tx_jesty2 {
+	font-family:Arial, Verdana, Tahoma, Georgia;
+	font-size:13px;
+	font-weight: normal;
+	color: #999999;
+	margin:15px 0;
+	text-decoration: none;
+	text-shadow:1px 1px 1px #FFF;
+	text-align:justify;
+	line-height:1.7em;
+}
+
+/*<--------------------------------------------------------------TX_STYLE---------------------------------------------------------->*/
+
+.tx1 {
+	font-family:Verdana, Tahoma, Arial;
+	font-size:11px;
+	font-weight: normal;
+	text-shadow:1px 1px 1px #003;
+	color:#FFF;
+}
+
+.tx2{
+	color:#294372;
+	text-transform:uppercase;
+	font-size:16px;
+	font-weight:bold;
+}
+
+
+
+.tell,.tell:hover,.tell:focus{
+	font-family:calibri, verdana, tahoma;
+	font-size:14px;
+	color:#A91F8D;
+	font-weight:normal;
+}
+
+.tell_w,.tell_w:hover,.tell_w:focus{
+	font-family:calibri, verdana, tahoma;
+	font-size:14px;
+	color:#FFF;
+	font-weight:normal;
+}
+
+
+
+/*<-------------------------------------------------------------- LINKS---------------------------------------------------------->*/
+
+.link1 {
+	color:#FFF !important;
+	font-family:Arial, Tahoma, Verdana;
+	font-weight:bold !important;
+	cursor:pointer;
+	letter-spacing:0.05em;
+	font-size:11px;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #003;
+}
+
+.link1:hover{
+	color:#00FFFF !important;
+	font-family:Arial, Tahoma, Verdana;
+	font-weight:bold !important;
+	letter-spacing:0.05em;
+	cursor:pointer;
+	text-transform:uppercase;
+	font-size:11px;
+	text-decoration:none;
+	text-shadow:1px 1px 1px #003;
+}
+
+.link1:focus {
+	color:#FFF;
+	outline: none !important;
+	text-decoration:none !important;
+}
+
+
+.link2{
+	color:#FFF !important;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight:normal;
+	cursor:pointer;
+	letter-spacing:0.05em;
+	font-size:13px;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #6A1A62;
+}
+
+.link2:hover{
+	color:#FFCCE6 !important;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight:normal;
+	letter-spacing:0.05em;
+	cursor:pointer;
+	text-transform:uppercase;
+	font-size:13px;
+	text-decoration:none;
+	text-shadow:1px 1px 1px #6A1A62;
+}
+
+.link2:focus {
+	color:#FFCCE6;
+	outline: none !important;
+	text-decoration:none !important;
+}
+
+.link3{
+	color:#E39FD9;
+}
+
+.link3:hover{
+	color:#D32998;
+}
+
+.link3:focus {
+	color:#E39FD9;
+
+}
+
+
+.link4{
+	color:#FFCCE6;
+	font-weight:normal;
+	cursor:pointer;
+	font-size:13px;
+	text-shadow:1px 1px 1px #41103C;
+}
+
+.link4:hover{
+	color:#FFF;
+	font-weight:normal;
+	cursor:pointer;
+	font-size:13px;
+	text-decoration:underline;
+	text-shadow:1px 1px 1px #41103C;
+}
+
+.link4:focus {
+	color:#FFCCE6;
+	outline: none !important;
+	text-decoration:none !important;
+}
+
+.Form1{
+	border-radius:0;
+	border:1px solid #6A1A62;
+}
+
+.NewsBtn,.NewsBtn:hover{
+	color:#FFF;
+	background-color:#6A1A62;
+	font-family: 'Titillium Web', sans-serif;
+	border-radius:0;
+	border:1px solid #FADEED;
+}
+
+	
+	
